@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.6)
-project(kobuki-controller)
+project(MyProject)
 
 # Use our modified FindSDL2* modules
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${MyProject_SOURCE_DIR}/cmake")
@@ -22,6 +22,6 @@ find_package(SDL2 REQUIRED)
 include_directories(${SDL2_INCLUDE_DIR})
 
 
-add_executable(kobuki-controller src/main.cpp)
-target_link_libraries(kobuki-controller ${SDL2_LIBRARY})
-install(TARGETS kobuki-controller RUNTIME DESTINATION ${BIN_DIR})
+add_executable(MyProject src/main.cpp)
+target_link_libraries(MyProject ${SDL2_LIBRARY})
+install(TARGETS MyProject RUNTIME DESTINATION ${BIN_DIR})
